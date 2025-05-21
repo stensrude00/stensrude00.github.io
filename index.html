@@ -27,28 +27,48 @@
       margin-bottom: 10px;
     }
     .menu {
-      display: grid;
-      grid-template-columns: 1fr;
-      max-width: 500px;
-      margin: 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
       padding: 0 20px;
     }
     .menu a {
-      display: block;
-      padding: 18px;
-      background: white;
+      flex: 1 1 250px;
+      background: linear-gradient(135deg, #ffffff, #d0f0ec);
       color: #00796b;
       text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-weight: bold;
+      border-radius: 12px;
+      padding: 20px;
       text-align: center;
-      transition: background 0.3s, transform 0.2s;
+      font-size: 1.1em;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
     }
     .menu a:hover {
-      background: #b2dfdb;
-      transform: scale(1.03);
+      background: #80cbc4;
+      color: white;
+      transform: translateY(-4px);
+    }
+    .secondary-button {
+      display: block;
+      margin: 0 auto 30px auto;
+      width: fit-content;
+      padding: 12px 20px;
+      background: #ffffff;
+      color: #00796b;
+      font-size: 0.9em;
+      border: 2px solid #00796b;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    .secondary-button:hover {
+      background: #00796b;
+      color: white;
     }
     footer {
       background: #f0f0f0;
@@ -57,11 +77,6 @@
       padding: 20px;
       font-size: 0.9em;
     }
-    @media (min-width: 600px) {
-      .menu {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
   </style>
 </head>
 <body>
@@ -69,16 +84,20 @@
     <h1>Welcome to BeachStay Seaspray</h1>
     <p>Unit 102A · Fort Walton Beach, FL</p>
   </header>
-  <a href="https://www.seaspraycondos.com/beach-cam" target="_blank">🌊 Beach Cam</a>
-<a href="https://www.destinfwb.com/explore/events/" target="_blank">🗓 Community Calendar</a>
+
+  <div class="menu">
+    <a href="https://www.seaspraycondos.com/beach-cam" target="_blank">🌊 Beach Cam</a>
+    <a href="https://www.destinfwb.com/explore/events/" target="_blank">🗓 Community Calendar</a>
     <a href="https://www.groupon.com/local/fort-walton-beach-fl/things-to-do?adsafe=true&gclsrc=aw.ds&&&utm_medium=cpc&utm_source=google&utm_campaign=us_dt_sea_ggl_txt_txn_sr_cbp_ch1_nbr_d*21254350742_g*162310488189&gclick=Cj0KCQjw0LDBBhCnARIsAMpYlAoqKQhfAxJ9elUT5AOsHqq3lcFglxR9dfJeyQUeuZlYTs-6rMq_5YsaAnmcEALw_wcB&gad_source=1&gad_campaignid=21254350742&gbraid=0AAAAADxu4DCT43WBPK5IiSf2iH6USoDar&gclid=Cj0KCQjw0LDBBhCnARIsAMpYlAoqKQhfAxJ9elUT5AOsHqq3lcFglxR9dfJeyQUeuZlYTs-6rMq_5YsaAnmcEALw_wcB" target="_blank">🎟 Local Attractions & Discounts</a>
     <a href="https://www.yelp.com/search?find_desc=Restaurants&find_loc=Fort+Walton+Beach%2C+FL+32548" target="_blank">🍽 Places to Eat</a>
     <a href="https://www.facebook.com/STENSRUDS/reviews" target="_blank">📝 Leave Feedback / Review</a>
     <a href="https://www.seaspraycondos.com/list-vacation-rental-amenities" target="_blank">🏖 Condo Amenities</a>
-  <a href="https://www.facebook.com/STENSRUDS" target="_blank">💬 Reserve & Save on Your Next Stay</a>
-
-  <a href="https://www.facebook.com/STENSRUDS" target="_blank" style="font-size: 0.9em; padding: 12px; display: block; text-align: center; color: #00796b;">📸 Tag Us in Your Photos</a>
-
+    <a href="https://www.facebook.com/STENSRUDS" target="_blank">💬 Reserve & Save on Your Next Stay</a>
+  </div>
+
+  <a href="https://www.facebook.com/STENSRUDS" target="_blank" class="secondary-button">📸 Tag Us in Your Photos</a>
+
+  <footer>
     &copy; 2025 BeachStay Seaspray · All Rights Reserved
   </footer>
 </body>
