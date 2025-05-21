@@ -3,69 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Our Beach Condo</title>
+  <title>BeachStay Seaspray</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
+    * {
       margin: 0;
       padding: 0;
-      text-align: center;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #e0f7fa;
+      color: #333;
     }
     header {
-      background: url('https://example.com/beach-header.jpg') no-repeat center center;
-      background-size: cover;
-      padding: 60px 20px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
       color: white;
+      text-align: center;
+      padding: 80px 20px;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
     .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 30px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 30px auto;
+      gap: 20px;
+      padding: 0 20px;
     }
     .menu a {
+      display: block;
+      padding: 18px;
       background: white;
-      color: #333;
+      color: #00796b;
       text-decoration: none;
-      border: 2px solid #008cba;
       border-radius: 10px;
-      padding: 15px 25px;
-      margin: 10px;
-      font-size: 1.2em;
-      width: 80%;
-      max-width: 400px;
-      transition: background 0.3s, color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s, transform 0.2s;
     }
     .menu a:hover {
-      background: #008cba;
-      color: white;
+      background: #b2dfdb;
+      transform: scale(1.03);
     }
     footer {
-      font-size: 0.9em;
+      background: #f0f0f0;
+      color: #555;
+      text-align: center;
       padding: 20px;
-      background: #eee;
-      color: #666;
+      font-size: 0.9em;
+    }
+    @media (min-width: 600px) {
+      .menu {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Beach Condo!</h1>
+    <h1>Welcome to BeachStay Seaspray</h1>
+    <p>Unit 102A · Fort Walton Beach, FL</p>
   </header>
   <div class="menu">
-    <a href="#calendar">Community Calendar</a>
-    <a href="#attractions">Local Attractions / Discounts</a>
-    <a href="#dining">Places to Eat</a>
-    <a href="#feedback">Leave Feedback / Review</a>
-    <a href="#amenities">Condo Amenities</a>
+    <a href="#calendar">🗓 Community Calendar</a>
+    <a href="#attractions">🎟 Local Attractions & Discounts</a>
+    <a href="#dining">🍽 Places to Eat</a>
+    <a href="#feedback">📝 Leave Feedback / Review</a>
+    <a href="#amenities">🏖 Condo Amenities</a>
   </div>
   <footer>
-    &copy; 2025 Beach Condo | All Rights Reserved
+    &copy; 2025 BeachStay Seaspray · All Rights Reserved
   </footer>
 </body>
 </html>
